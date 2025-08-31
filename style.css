@@ -22,6 +22,7 @@ body {
   transform: translateX(-50%); /* recentre le bloc sur lui-même */ 
   font-family: "Poppins", sans-serif;
   width: 60%; 
+  height: 70px;
   border-radius: 30px;             
   display: flex;
   justify-content: space-between;

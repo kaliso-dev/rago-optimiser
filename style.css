@@ -31,10 +31,19 @@ body {
   backdrop-filter: blur(10px);    
   color: white;
   z-index: 1000;  
+  
 }
 
 
 /* Logo */
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
 .logo_img {
   width: 70%;
   font-weight: bold;
@@ -73,6 +82,14 @@ body {
 .btn-download:hover {
   background: #ff3030;
 }
+
+.cta-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
 
 .hero {
   height: 100vh;  /* prend toute la hauteur de l’écran */

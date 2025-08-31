@@ -1,0 +1,92 @@
+/* Reset basique */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+
+/* Navbar */
+.navbar {
+  position: fixed;          
+  top: 20px;                 /* remplace margin-top par top */
+  left: 50%;                 /* centre par rapport à l’écran */
+  transform: translateX(-50%); /* recentre le bloc sur lui-même */
+  
+  width: 60%; 
+  border-radius: 30px;             
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 7px 30px;
+  background: rgba(0, 0, 0, 0.8); 
+  backdrop-filter: blur(10px);    
+  color: white;
+  z-index: 1000;  
+}
+
+
+/* Logo */
+.logo_img {
+  width: 70%;
+  font-weight: bold;
+  color: red;
+}
+
+/* Liens */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #ff5252;
+}
+
+/* Bouton download */
+.btn-download {
+  background: red;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.btn-download:hover {
+  background: #ff3030;
+}
+
+.hero {
+  height: 100vh;  /* prend toute la hauteur de l’écran */
+  background-image: url("./assets/hero_banner.png"); /* chemin vers ton image */
+  background-size: cover;   /* adapte l’image à l’écran */
+  background-position: center; /* centre l’image */
+  background-repeat: no-repeat; /* pas de répétition */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.hero-content p {
+  font-size: 1.5rem;
+}

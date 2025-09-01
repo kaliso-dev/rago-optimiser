@@ -33,14 +33,37 @@ body {
   border: solid 2px #F22B29;
 }
 
-/* important: pas de hauteur fixe */
-.menu-toggle { 
-  display: none;            /* caché par défaut (PC/tablette) */
-  background: transparent;
-  border: 0;
-  font-size: 28px;
-  color: #fff;
+/* --- Bouton burger --- */
+.menu-toggle {
+  display: none; /* caché par défaut (PC/tablette) */
+  flex-direction: column;
+  justify-content: space-between;
+  width: 28px;
+  height: 22px;
+  background: none;
+  border: none;
   cursor: pointer;
+  z-index: 1100; /* au-dessus du menu */
+}
+
+.menu-toggle span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background: white;
+  border-radius: 3px;
+  transition: all 0.35s ease;
+}
+
+/* Animation en X quand actif */
+.menu-toggle.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+.menu-toggle.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
 }
 
 
@@ -197,46 +220,48 @@ body {
   .nav-links { gap: 18px; }
 }
 
-/* --- Mobile --- */
+/* --- Menu mobile --- */
 @media (max-width: 768px) {
-  .navbar { width: 92%; padding: 10px 16px; }
+  .navbar {
+    width: 95%;
+    padding: 12px 20px;
+  }
 
-  .menu-toggle { 
-    display: block;
-    width: 50px;
-}
+  .menu-toggle { display: flex; }
 
   .nav-links {
-    display: flex;
     flex-direction: column;
-    gap: 18px;
+    gap: 24px;
     position: absolute;
-    top: calc(100% + 10px);
+    top: 100%;
     left: 50%;
     transform: translateX(-50%) translateY(-10px);
-    width: 100%;
-    max-width: 520px;
-    background: rgba(30,39,59,0.95);
+    width: 95%;
+    max-width: 600px;
+    background: rgba(30,39,59,0.97);
     border-radius: 20px;
-    padding: 0 18px;
     text-align: center;
 
     /* animation hidden */
     max-height: 0;
     overflow: hidden;
     opacity: 0;
-    transition: all 0.35s ease;
+    transition: all 0.4s ease;
   }
 
-  /* quand actif */
   .nav-links.active {
-    padding: 18px;
-    max-height: 400px;       /* hauteur suffisante pour les liens */
+    padding: 28px;
+    max-height: 500px; /* plus grand pour respirer */
     opacity: 1;
     transform: translateX(-50%) translateY(0);
   }
 
-  .btn-download { padding: 10px 14px; font-size: 14px; }
-  .discord-button-img { width: 100%; }
-}
+  .nav-links a {
+    font-size: 18px; /* texte plus gros sur mobile */
+  }
 
+  .btn-download {
+    padding: 12px 18px;
+    font-size: 16px;
+  }
+}

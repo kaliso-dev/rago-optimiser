@@ -30,6 +30,7 @@ body {
   backdrop-filter: blur(10px);
   color: #fff;
   z-index: 1000;
+  border: solid 2px #F22B29;
 }
 
 /* important: pas de hauteur fixe */
@@ -153,6 +154,41 @@ body {
     font-weight: 500;
 }
 
+
+.section2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #161E2F;
+    border-radius: 20px;
+    padding: 20px 20px;
+    width: 75%;
+}
+
+.preview_app {
+    width: 70%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*RESPONSIVE*/ 
 
 /* --- Ajustements PC/tablette --- */
@@ -165,26 +201,37 @@ body {
 @media (max-width: 768px) {
   .navbar { width: 92%; padding: 10px 16px; }
 
-  /* le burger n'apparaît que maintenant */
   .menu-toggle { display: block; }
 
-  /* liens cachés par défaut sur mobile */
   .nav-links {
-    display: none;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
     position: absolute;
     top: calc(100% + 10px);
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-50%) translateY(-10px);
     width: 100%;
     max-width: 520px;
-    flex-direction: column;
-    gap: 18px;
     background: rgba(30,39,59,0.95);
     border-radius: 20px;
-    padding: 18px;
+    padding: 0 18px;
     text-align: center;
+
+    /* animation hidden */
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: all 0.35s ease;
   }
-  .nav-links.active { display: flex; }
+
+  /* quand actif */
+  .nav-links.active {
+    padding: 18px;
+    max-height: 400px;       /* hauteur suffisante pour les liens */
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
 
   .btn-download { padding: 10px 14px; font-size: 14px; }
   .discord-button-img { width: 100%; }

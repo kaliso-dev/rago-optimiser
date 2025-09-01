@@ -201,7 +201,10 @@ body {
 @media (max-width: 768px) {
   .navbar { width: 92%; padding: 10px 16px; }
 
-  .menu-toggle { display: block; }
+  .menu-toggle { 
+    display: block;
+    font-size: 38px;
+}
 
   .nav-links {
     display: flex;

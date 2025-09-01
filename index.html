@@ -9,22 +9,30 @@
 <body>
 
   <!-- Navbar -->
- <div class="container">  
+<div class="container">
   <nav class="navbar">
-    <div class="logo"><img class="logo_img" src="assets/logo.png" alt=""></div>
-    <ul class="nav-links">
+    <div class="logo">
+      <img class="logo_img" src="assets/logo.png" alt="">
+    </div>
+
+    <!-- bouton burger (visible uniquement sur mobile) -->
+    <button class="menu-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Ouvrir le menu">☰</button>
+
+    <ul class="nav-links" id="primary-nav">
       <li><a href="#pricing">Pricing</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
+
     <div class="cta-navbar">
-        <a style="width: 37px; height: 29px; margin-right: 15px;" href="https://discord.gg/NYHh57AFK6">
-            <img class="discord-button-img" src="/assets/discord.png" alt="">
-        </a>    
-        <a href="#download" class="btn-download">Download</a>
+      <a style="width:37px;height:29px;margin-right:15px;" href="https://discord.gg/NYHh57AFK6">
+        <img class="discord-button-img" src="/assets/discord.png" alt="">
+      </a>
+      <a href="#download" class="btn-download">Download</a>
     </div>
   </nav>
 </div>
+
 
   <!-- Contenu -->
 <section class="hero">
@@ -42,5 +50,6 @@
   <section style="height:100vh; background:#333;"></section>
   <section style="height:100vh; background:#444;"></section>
 
+<script src="script.js"></script>
 </body>
 </html>

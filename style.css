@@ -241,6 +241,7 @@ body {
     background: rgba(30,39,59,0.97);
     border-radius: 20px;
     text-align: center;
+    margin-top: 15px;
 
     /* animation hidden */
     max-height: 0;

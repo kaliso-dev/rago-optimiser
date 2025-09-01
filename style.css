@@ -203,7 +203,7 @@ body {
 
   .menu-toggle { 
     display: block;
-    font-size: 38px;
+    width: 50px;
 }
 
   .nav-links {
